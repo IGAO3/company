@@ -1,10 +1,13 @@
-package domain;
+package domain.staff;
 
-public class TechLead extends People implements Duties{
+import domain.Duties;
+import domain.Employee;
+
+public class TechLead extends Employee implements Duties {
     private int numberOfEmployeesManaged;
 
-    public TechLead(String name, String age, int numberOfEmployeesManaged) {
-        super(name, age);
+    public TechLead(String name, int age, String jobTitle, double salary, int numberOfEmployeesManaged) {
+        super(name, age, jobTitle, salary);
         this.numberOfEmployeesManaged = numberOfEmployeesManaged;
     }
 
@@ -27,6 +30,6 @@ public class TechLead extends People implements Duties{
     public void tasks() {
         System.out.println("I manage the amout of:" + numberOfEmployeesManaged + "empolyees");
         System.out.println("I direct what each developer needs to do during the week");
-        System.out.println("I design new solutions for the projects");
+
     }
 }

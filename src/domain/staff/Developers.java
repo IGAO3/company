@@ -1,6 +1,9 @@
-package domain;
+package domain.staff;
 
-public class Developers extends Employee implements Duties{
+import domain.Duties;
+import domain.Employee;
+
+public class Developers extends Employee implements Duties {
     private String stack;
     private String areaOfExpertise;
 
